@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/.babelrc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/README.md" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bloglog.gif" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/favicon.ico" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/node_modules" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/page1.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/App.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/Test.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/favicon.ico" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/index.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/template.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/webpack-dev-config.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/webpack-pro-config.js" charset="UTF-8" />
+  </component>
+</project>
