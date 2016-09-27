@@ -1,0 +1,35 @@
+@import '../../../css/myBase';
+
+
+.banner{
+  background: white;
+  @include pad(30px,0,0,0);
+  box-shadow: 0 0 8px rgb(172, 172, 172);
+  position:fixed;width:100%;
+  .banner_left{
+    @include area(auto,60px);
+    @include left(0);
+    img{@include area(85px,60px) }
+  }
+  .banner_right{
+    @include area(auto,60px);
+    @include right(0);
+    input {
+      @include area(300px,auto);
+      @include bord(3px,3px,3px,3px,solid,orange)
+    }
+    .search {
+      &:hover {cursor:pointer;}
+      //@include mag(0,0,0,px);
+      @include pad(3px,0,3px,0);
+      background: orange;
+    }
+    .pub {
+      &:hover {cursor:pointer;}
+      @include mag(16px,0,0,8px);
+      @include pad(3px,0,3px,0);
+      background-color: orange;
+    }
+
+  }
+}

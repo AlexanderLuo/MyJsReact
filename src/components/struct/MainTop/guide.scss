@@ -1,0 +1,30 @@
+@import "../../../css/myBase";
+
+
+
+.guide {
+
+  .guide_list {
+    @include left(0);
+    h2 {
+      background-color: #e63b0d;
+    }
+    .guide_list_part {
+      background-color: #ff5931;
+    }
+  }
+}
+
+
+.guide_adve {
+  .adve_left {
+    width: 70%;
+    @include left(0)
+
+  }
+  .adve_right {
+    width: 30%;
+    @include left(0)
+
+  }
+}

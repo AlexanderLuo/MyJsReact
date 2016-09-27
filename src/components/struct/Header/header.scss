@@ -1,0 +1,65 @@
+@import '../../../css/myBase';
+@import "../../component/Layout/layout";
+
+
+
+.header{
+  @extend .shell_box;
+  @include bg();
+  @include ft();
+  @include shadow();
+  position:fixed;
+  z-index:100;
+}
+
+
+.top_left{
+  @include left(0);
+}
+
+
+.drop_down{
+  &:hover{
+    background:#f8f8f8;
+    border: 1px solid #d8d8d8;
+    border-top:none;
+    border-bottom: none;
+  }
+}
+
+.drop_down_child{
+  @include bord(0,1px,1px,1px,solid, #d8d8d8);
+  background-color: white;
+  position: fixed;
+  display: none;
+  @include pad(6px,0,0,6px);
+  .cont1{
+    @include left(0);
+    img{
+      @include area(62px,62px);
+      display: inline-block;
+    }
+  }
+  .cont2{
+
+    @include left(20px);
+    @include pad(8px,10px,0,10px)
+
+  }
+}
+
+.drop_down:hover .drop_down_child{
+
+  display: block;
+}
+
+
+.top_right {@include right(0)}
+.top_menu{  }
+.top_menu li { @include left(6px) }
+
+
+
+
+
+

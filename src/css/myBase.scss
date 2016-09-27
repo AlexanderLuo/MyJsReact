@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/*图标字体架构*/
+@font-face {
+  /*font-family: "qky_icon";*/
+  /*src: url('../../font/iconfont.eot'); !* IE9*!*/
+  /*src: url('../../font/iconfont.eot?#iefix') format('embedded-opentype'), !* IE6-IE8 *!*/
+  /*url('../../font/iconfont.woff') format('woff'), !* chrome, firefox *!*/
+  /*url('../../font/iconfont.ttf') format('truetype'), !* chrome, firefox, opera, Safari, Android, iOS 4.2+*!*/
+  /*url('../../font/iconfont.svg#iconfont') format('svg'); !* iOS 4.1- *!*/
+}
+
+
+
+/*基础样式*/
+body{ font-size:12px;color:#666666; overflow-x:hidden; width:100%; background: #ffffff;}
+*{ margin:0; padding:0; text-decoration:none; list-style:none; font-weight:normal;font-family: Arial,Microsoft YaHei;}
+li,ul{list-style:none; margin:0; padding:0;}
+img,button{ border:0px;}
+img{vertical-align: middle;}
+a{ color:#666; cursor:pointer;}
+i,em{ font-style:normal;}
+textarea,input,select{ outline:none;font-family: Microsoft YaHei;}
+
+
+.yc{display: none}
+
+
+
+$gray1:rgb(172, 172, 172);
+
+
+$max-box:1280px;
+$mid-box:1000ox;
+
+
+
+
+
+
+
+
+
+
+
+/*********************************************************************
+ *                    1                                *
+ **********************************************************************/
+
+
+@mixin pad($a,$b,$c,$d){
+  padding: $a $b $c $d;
+}
+@mixin mag($a,$b,$c,$d){
+  margin:$a $b $c $d;
+}
+@mixin area($wi,$he){
+  width: $wi;
+  height: $he;
+}
+@mixin left($mg-lef){
+  float: left;
+  margin-left: $mg-lef ;
+}
+@mixin right($mg-rig){
+  float: right;
+  margin-left: $mg-rig ;
+}
+
+/*********************************************************************
+ *                    2                                *
+ **********************************************************************/
+
+@mixin color($bgc:white,$cl:black){
+  background-color: $bgc;
+  color: $cl;
+}
+@mixin bg($bgc:white,$img:false,$method:false) {
+  background-color: $bgc;
+  @if $img {
+  background-image: $img;
+}
+  @if $method{
+
+  }
+}
+
+@mixin ft($fz:16px,$fc:black){
+  font-size: $fz;
+  color: $fc;
+}
+
+@mixin bord($a,$b,$c,$d,$sty,$col){
+  border-top: $a;
+  border-right: $b;
+  border-bottom:$c;
+  border-left: $d;
+  border-style: $sty;
+  border-color: $col;
+
+}
+
+@mixin shadow($color:$gray1,$top:0,$right:0,$bottom:8px,$left:0){
+  box-shadow: $top $right $bottom $left $color;
+}
+
+
+

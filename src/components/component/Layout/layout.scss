@@ -1,0 +1,40 @@
+@import "../../../css/myBase";
+
+$max-box:1280px;
+$mid-box:1000ox;
+
+
+
+
+
+
+
+
+.shell_box {
+  width: 100%;
+}
+
+
+.max_box{
+  width:$max-box;
+  margin:0 auto;
+}
+
+.left_part {
+  width: 20%;
+  background-color: white;
+  @include left(0)
+
+}
+.center_part {
+  width: 60%;
+  background-color: white;
+  @include left(0)
+
+}
+.right_part {
+  width: 20%;
+  background-color: white;
+  @include left(0)
+}
+

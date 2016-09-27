@@ -1,0 +1,51 @@
+@import '../../css/myBase';
+@import "../component/Layout/layout";
+
+
+.main_top  {
+  @include pad(100px,0,0,0)
+
+}
+
+.single {
+  @include left(0);
+  display: inline-block;
+  overflow: hidden;
+  @include bord(1px,1px,1px,1px,solid, #a2a2a2);
+  @include area(480px,305px);
+  .pic {
+    @include area(200px,305px);
+    @include left(0)
+  }
+  .cont {
+
+    @include area(300px,305px);
+    @include left(0);
+    .top {
+      @include bord(0px,0px,1px,1px,solid,#a2a2a2);
+    }
+    .bottom {
+      @include bord(0px,0px,0,1px,solid,#a2a2a2);
+    }
+  }
+}
+
+
+
+.content_top {
+
+  @include pad(90px,0,0,0);
+
+  .top_left {
+    @extend .left_part;
+    width: 22%;
+}
+  .top_center{
+    @extend .center_part;
+    width: 58%;
+  }
+  .top_right{
+    @extend .right_part;
+    width: 20%;
+  }
+}
