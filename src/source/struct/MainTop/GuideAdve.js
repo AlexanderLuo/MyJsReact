@@ -6,15 +6,15 @@
 
 import React, { Component } from 'react';
 
-import Slider from '../../component/Slider/Slider.js'
+import Slider from 'component/Slider/Slider.js'
 require('./guide.scss');
 
-import '../../../images/s1.jpg'
-import '../../../images/s2.jpg'
-import '../../../images/s3.jpg'
-import '../../../images/hot1.jpg'
-import '../../../images/hot2.jpg'
-import '../../../images/hot3.jpg'
+import 'images/s1.jpg'
+import 'images/s2.jpg'
+import 'images/s3.jpg'
+import 'images/hot1.jpg'
+import 'images/hot2.jpg'
+import 'images/hot3.jpg'
 
 
 const IMAGE_DATA = [

@@ -6,9 +6,9 @@
 
 import React, { Component } from 'react';
 
-import OneCol from '../../component/Layout/OneCol.js'
+import OneCol from 'component/Layout/OneCol.js'
 
-import '../../../images/logo.png'
+import 'images/logo.png'
 
 require('./banner.scss');
 

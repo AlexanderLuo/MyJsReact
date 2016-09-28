@@ -6,7 +6,7 @@
 
 import React, { Component } from 'react';
 
-import '../../images/pic.png'
+import 'images/pic.png'
 
 export default class Product extends Component {
     render() {

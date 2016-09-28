@@ -6,13 +6,14 @@
 
 import React, { Component } from 'react';
 
-import OneCol from '../component/Layout/OneCol.js'
-import TwoCol from '../component/Layout/TwoCol.js'
-import ThreeCol from '../component/Layout/ThreeCol.js'
+import OneCol from 'component/Layout/OneCol.js'
+import TwoCol from 'component/Layout/TwoCol.js'
+import ThreeCol from 'component/Layout/ThreeCol.js'
 
 
-import Product from '../component/Product.js'
-import Lab_In_Clear from '../component/InputBox/TipInput.js'
+import Product from 'component/Product.js'
+import Lab_In_Clear from 'component/InputBox/TipInput.js'
+
 
 
 
