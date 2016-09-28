@@ -16,7 +16,7 @@ export default class TipInput extends Component {
             <div>
                 <label>{this.props.labelText}</label>
                 <input
-                    placeholder={this.props.hinderText}
+                    placeholder={this.props.tipText}
                     onChange={this.props.change}
                     >
                 </input>
@@ -30,6 +30,6 @@ export default class TipInput extends Component {
 
 TipInput.defaultProps={
     labelText: "标题",
-    hinderText: "请输入内容"
+    tipText: "请输入内容"
 }
 
