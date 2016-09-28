@@ -12,7 +12,7 @@ import ThreeCol from '../component/Layout/ThreeCol.js'
 
 
 import Product from '../component/Product.js'
-import Lab_In_Clear from '../component/InputBox/Lab_In_Clear.js'
+import Lab_In_Clear from '../component/InputBox/TipInput.js'
 
 
 

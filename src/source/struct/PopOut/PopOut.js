@@ -1,39 +1,25 @@
 /**
  * Copyright by Alexrander Luo.
- * Create Date 2016/9/27
+ * Create Date 2016/9/28
  * Email 496952252@qq.com
  */
 
 import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux'
-import { createStore } from 'redux'
 
+import store from 'src/store.js'
+import action from 'actions/action.js'
 
-
-
-
-
-const Counter=({vakue})=>(
-    <h1>{value}</h1>
-)
-
-
-
-
-
-export default class Test extends Component {
+export default class PopOut extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
         return (
-            <div> <Counter value={ store.getState }/></div>
+            <div></div>
         );
     }
 }
 
-
-
-
-Test.defaultProps = {}
+PopOut.defaultProps = {}

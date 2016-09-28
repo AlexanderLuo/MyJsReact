@@ -5,51 +5,57 @@
  */
 
 import React, { Component } from 'react';
-import OneCol from '../../component/Layout/OneCol.js'
-
-
-import '../../../images/weixin.jpg'
 import { Provider, connect } from 'react-redux'
-require('./header.scss');
+import OneCol from 'component/Layout/OneCol.js'
 
+import action from  'actions/action.js';
+import store from 'src/store.js'
 
-
-const popLoginAction = { type: 'popLogin' }
-
-
-
+import './header.scss'
+import 'images/weixin.jpg'
 
 
 
 
 // Map Redux actions to component props
-function mapDispatchToProps(dispatch) {
+function disLogin(dispatch) {
     return {
-        pop: () => dispatch(popLoginAction)
+        click: () => dispatch(action.popLogin)
     }
 }
 
 
+
+// Map Redux actions to component props
+function disSignUp(dispatch) {
+    return {
+        clickS: () => dispatch(action.popSignUp)
+    }
+}
 
 
 class Login extends Component{
     render(){
         return(
-            <li onClick={this.props.pop}>登 录</li>
+            <li onClick={this.props.click}>登 录</li>
         );
     }
 }
 
-const XLogin=connect(null,mapDispatchToProps)(Login);
+
+class SignUp extends Component{
+    render(){
+        return(
+            <li onClick={this.props.clickS}>注 册</li>
+        );
+    }
+}
+
+const XSignUp=connect(null,disSignUp)(SignUp);
+
+const XLogin=connect(null,disLogin)(Login);
 
 
-
-// Connected Component
-//const XLogin=connect(mapStateToProps,null)(Word);
-//
-//
-
-//
 
 
 export default class Header extends Component {
@@ -68,10 +74,15 @@ export default class Header extends Component {
                     </div>
                     <div className="top_right">
                         <ul className="top_menu">
-                            <li>注册</li>
-                            <Provider store={this.props.store}>
+                            <Provider store={store}>
                                 <XLogin />
                             </Provider>
+
+                            <Provider store={store}>
+                                <XSignUp />
+                            </Provider>
+
+
                             <li>帮助中心</li>
                         </ul>
                     </div>
@@ -80,3 +91,4 @@ export default class Header extends Component {
         );
     }
 }
+

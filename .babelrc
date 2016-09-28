@@ -2,5 +2,18 @@
   "presets": ["es2015", "react", "es2015-loose", "stage-0"],
   // stage-0 一定要放在最右边。这样组件中才可以直接用state，而不是放在construct里
 
-  "plugins": ["react-hot-loader/babel"]
+  "plugins": ["react-hot-loader/babel",
+               ["module-alias", [
+                     { "src": "./src", "expose": "src" },
+                     { "src": "./src/actions", "expose": "actions" },
+                     { "src": "./src/reducers", "expose": "reducers" },
+                     { "src": "./src/source", "expose": "source" },
+                     { "src": "./src/css", "expose": "css" },
+                     { "src": "./src/js", "expose": "js" },
+                     { "src": "./src/images", "expose": "images" },
+                     { "src": "./src/source/component", "expose": "component" },
+                     { "src": "./src/source/struct", "expose": "struct" },
+                   ]]
+             ]
 }
+

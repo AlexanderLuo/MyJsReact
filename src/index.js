@@ -5,10 +5,6 @@ import {render} from 'react-dom'
 import App from './App'
 
 
-import './css/myBase.scss'
-import './js/struct/Header/header.scss'
-
-
 
 
 const rootEl = document.getElementById('app');

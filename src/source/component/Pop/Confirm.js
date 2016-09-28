@@ -17,29 +17,25 @@ export default class Confirm extends Component {
 
     constructor(props) {
         super(props);
-        this.state={
-            visible:true
-        }
     }
-
 
     render() {
         return (
-            <div className={"modal-mask"+" "+(this.props.visible?"":"yc")}>
+            <div className={(this.props.visible?"modal-mask":"yc")}>
                 <div className="modal-box">
                     <div className="modal-header">
                         <h3>{this.props.title}</h3>
-                        <i className="modal-close" onClick={ this.props.cancel }>X</i>
+                        <i className="modal-close" onClick={ this.props.popOut }>X</i>
                     </div>
                     <div className="modal-body">
                         {
                             React.Children.map(this.props.children, function (child) {
-                                    return  {child} ;
+                                    return  <div>{child}</div> ;
                                 })
                         }
                     </div>
                     <div className="modal-footer">
-                        <button className="btn" onClick={this.props.cancel }>取 消</button>
+                        <button className="btn" onClick={this.props.popOut }>取 消</button>
                         <button className="btn btn-primary" onClick={this.props.confirm}>确 定</button>
                     </div>
                 </div>
