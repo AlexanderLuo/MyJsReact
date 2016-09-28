@@ -16,29 +16,24 @@ import 'images/weixin.jpg'
 
 
 
-
 // Map Redux actions to component props
-function disLogin(dispatch) {
+function disSignIn(dispatch) {
     return {
-        click: () => dispatch(action.popLogin)
+        signIn: () => dispatch(action.popSignIn)
     }
 }
-
-
+class SignIn extends Component{
+    render(){
+        return(
+            <li onClick={this.props.signIn}>登 录</li>
+        );
+    }
+}
 
 // Map Redux actions to component props
 function disSignUp(dispatch) {
     return {
-        clickS: () => dispatch(action.popSignUp)
-    }
-}
-
-
-class Login extends Component{
-    render(){
-        return(
-            <li onClick={this.props.click}>登 录</li>
-        );
+        signUp: () => dispatch(action.popSignUp)
     }
 }
 
@@ -46,14 +41,13 @@ class Login extends Component{
 class SignUp extends Component{
     render(){
         return(
-            <li onClick={this.props.clickS}>注 册</li>
+            <li onClick={this.props.signUp}>注 册</li>
         );
     }
 }
 
 const XSignUp=connect(null,disSignUp)(SignUp);
-
-const XLogin=connect(null,disLogin)(Login);
+const XSignIn=connect(null,disSignIn)(SignIn);
 
 
 
@@ -75,7 +69,7 @@ export default class Header extends Component {
                     <div className="top_right">
                         <ul className="top_menu">
                             <Provider store={store}>
-                                <XLogin />
+                                <XSignIn />
                             </Provider>
 
                             <Provider store={store}>

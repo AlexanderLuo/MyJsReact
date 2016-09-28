@@ -5,14 +5,23 @@
  */
 
 
-const popLogin = { type: 'popLogin' };
+const popSignIn = { type: 'popSignIn' };
 const popSignUp={type:'popSignUp'};
 const popOut={ type:"popOut"};
+
+const changeText=function(account=""){
+    return{
+        type:"changeText",
+        account:account
+    }
+};
+
 
 
 
 module.exports = {
-    popLogin,
+    popSignIn,
     popSignUp,
-    popOut
+    popOut,
+    changeText
 }

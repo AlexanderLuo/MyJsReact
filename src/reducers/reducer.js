@@ -5,14 +5,17 @@
  */
 
 // Reducer
-function reducer(state = { visibleFilter:{def:false,signUp:false},count: 0 }, action='') {
+function reducer(state = { visibleFilter:{signIn:false,signUp:false},account: "" }, action='') {
     switch (action.type) {
-        case 'popLogin':
-            return { visibleFilter:{def:true}};
+        case 'popSignIn':
+            return { visibleFilter:{signIn:true}};
         case 'popSignUp':
             return { visibleFilter:{signUp:true}};
         case 'popOut':
-            return { visibleFilter:{def:false,signUp:false}};
+            return { visibleFilter:{signIn:false,signUp:false}};
+        case "changeText":
+            state.account=action.account;
+            return state;
         default:
             return state
     }
@@ -20,3 +23,7 @@ function reducer(state = { visibleFilter:{def:false,signUp:false},count: 0 }, ac
 
 
 module.exports = reducer
+//
+//module.exports = combineReducers({
+//    items
+//})
