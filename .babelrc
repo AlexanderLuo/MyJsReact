@@ -15,6 +15,7 @@
                      { "src": "./src/source/struct", "expose": "struct" },
                      { "src": "./src/source/component/Tag", "expose": "Tag" },
 
+
                    ]]
              ]
 }
