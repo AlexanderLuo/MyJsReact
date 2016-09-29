@@ -2,18 +2,18 @@
 
 
 
-.guide {
-
   .guide_list {
     @include left(0);
     h2 {
-      background-color: #e63b0d;
+      @include color(#e63b0d,white);
     }
     .guide_list_part {
-      background-color: #ff5931;
+      @include color(#ff5931,white);
+    }
+    ul >li{
+      @include ft(16px,white)
     }
   }
-}
 
 
 .guide_adve {

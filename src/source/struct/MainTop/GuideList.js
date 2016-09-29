@@ -6,8 +6,8 @@
 
 import React, { Component } from 'react';
 
+import './guide.scss'
 
-require('./guide.scss');
 
 class GuideListPart extends Component{
     render(){

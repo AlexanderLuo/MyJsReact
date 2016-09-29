@@ -13,6 +13,8 @@
                      { "src": "./src/images", "expose": "images" },
                      { "src": "./src/source/component", "expose": "component" },
                      { "src": "./src/source/struct", "expose": "struct" },
+                     { "src": "./src/source/component/Tag", "expose": "Tag" },
+
                    ]]
              ]
 }
