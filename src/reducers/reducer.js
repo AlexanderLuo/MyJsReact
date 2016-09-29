@@ -4,26 +4,35 @@
  * Email 496952252@qq.com
  */
 
+
+
+const initState={
+
+    signIn:false,
+    signUp:false,
+    account:"",
+    password:""
+
+
+};
+
+
 // Reducer
-function reducer(state = { visibleFilter:{signIn:false,signUp:false},account: "" ,password:""}, action='') {
+function reducer(state = initState, action={}) {
     switch (action.type) {
-        case 'popSignIn':
-            return { visibleFilter:{signIn:true}};
-        case 'popSignUp':
-            return { visibleFilter:{signUp:true}};
-        case 'popOut':
-            return { visibleFilter:{signIn:false,signUp:false}};
-        case "changeText":
-            if(action.account)
-            state.account=action.account;
-            if(action.password)
-            state.password=action.password;
+        case 'signIn':
+            console.log(state.account,state.password)
             return state;
-        case "signIn":
-            return{
-                account,
-                password
+        case 'setVisible':
+            return {...state,signIn:action.isShow};
+        case 'changeText':
+            if(action.id ==="account"){
+                return {...state,account:action.text}
             }
+            if(action.id ==="password"){
+                return {...state,password:action.text}
+            }
+            return state;
         default:
             return state
     }

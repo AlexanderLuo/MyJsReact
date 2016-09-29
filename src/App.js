@@ -13,22 +13,23 @@ import SignInPop from 'struct/PopOut/SignInPop.js'
 
 
 
+
+
 export default class App extends Component {
   render() {
     return (
+   <div>
         <div>
             <Header />
             <Banner />
             <Content />
-            <Provider store={store}>
-                <SignInPop />
-            </Provider>
-
         </div>
-
+            <SignInPop />
+   </div>
     );
   }
 }
+connect()(App)
 
 
 

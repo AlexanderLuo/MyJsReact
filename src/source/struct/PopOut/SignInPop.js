@@ -7,7 +7,7 @@
 import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux'
 
-import store from 'src/store.js'
+
 import action from 'actions/action.js'
 
 
@@ -15,53 +15,38 @@ import Confirm from 'component/Pop/Confirm.js'
 import TipInput from 'component/InputBox/TipInput.js'
 
 
-function mapDis(dispatch){
-    return {
-        cancel:()=>dispatch(action.popOut),
-        confirm:()=>dispatch(action.signIn)
-    }
-}
 
-function mapPro(state){
-    return{
-        visible:state.visibleFilter.signIn
-    }
-}
+ const XConfirm =connect(
+     (state)=>{
+     return {
+         visible:state.signIn
+     }
+ },
+     (dispatch)=>{
+     return {
+         cancel:()=>dispatch(action.setVisible(false)),
+         confirm:()=>dispatch(action.signIn())
 
-const XConfirm=connect(mapPro,mapDis)(Confirm);
+     }}
+ )(Confirm);
 
+    const Account=connect(
+        null,
+        (dispatch)=>{
+            return  {
+                change:(text)=>dispatch(action.changeText("account",text))
+            }
+        }
+    )(TipInput);
 
-
-
-function mapDisAccount(dispatch){
-    return {
-        change:(account)=>dispatch(action.changeText(account))
-    }
-}
-
-
-function mapProAccount(state){
-    return{
-        value:state.account
-    }
-}
-const Account=connect(mapProAccount,mapDisAccount)(TipInput);
-
-
-function mapDisPassword(dispatch){
-    return {
-        change:(password)=>dispatch(action.changeText(password))
-    }
-}
-
-
-function mapProPassword(state){
-    return{
-        value:state.password
-    }
-}
-const Password=connect(mapProPassword,mapDisPassword)(TipInput);
-
+    const Password=connect(
+        null,
+        (dispatch)=>{
+            return  {
+                change:(text)=>dispatch(action.changeText("password",text))
+            }
+        }
+    )(TipInput);
 
 
 
@@ -74,13 +59,13 @@ export default class SignInPop extends Component {
     render() {
         return (
             <XConfirm>
-
+                <Account lable={"账户"} />
+                <Password lable={"密码"} />
             </XConfirm>
         );
     }
 }
-//<Account labelText={"账号"} />
-//<Password labelText={"密码"} />
+
 
 
 SignInPop.defaultProps = {}

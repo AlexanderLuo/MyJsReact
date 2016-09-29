@@ -4,6 +4,8 @@ import React from 'react'
 import {render} from 'react-dom'
 import App from './App'
 
+import store from 'src/store.js'
+import { Provider } from 'react-redux'
 
 
 
@@ -11,7 +13,9 @@ const rootEl = document.getElementById('app');
 
 render(
   <AppContainer>
+    <Provider store={store}>
     <App />
+    </Provider>
   </AppContainer>,
   rootEl
 );

@@ -15,31 +15,35 @@ export default class TipInput extends Component {
 
     changeHandle(){
         const node=ReactDOM.findDOMNode(this.refs.input);
-        const value=node.value.trim();
-        this.props.change(value);
+        const text=node.value.trim();
+        this.props.change(text);
+    }
+    clickHandle(){
+        const node=ReactDOM.findDOMNode(this.refs.input);
+        //this.props.clear();
+        node.value="";
     }
 
     render() {
         return (
-            <div>
-                <label>{this.props.labelText}</label>
+            <div>,
+                <label>{this.props.label}</label>
                 <input
-                       placeholder={this.props.tipText}
+                       placeholder={this.props.tip}
                        value={this.props.value}
                        onChange={this.changeHandle.bind(this)}
                        ref="input" />
-                <button onClick={this.props.clear}>clear</button>
+                <button onClick={e =>this.clickHandle(e)}>clear</button>
             </div>
         );
     }
+
 }
 
 
 
-
-
 TipInput.defaultProps={
-    labelText: "标题",
-    tipText: "请输入内容"
+    label: "标题",
+    tip: "请输入内容"
 }
 

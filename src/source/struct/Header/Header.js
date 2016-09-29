@@ -7,48 +7,29 @@
 import React, { Component } from 'react';
 import { Provider, connect } from 'react-redux'
 import OneCol from 'component/Layout/OneCol.js'
+import Li from 'Tag/Li.js'
+
 
 import action from  'actions/action.js';
 import store from 'src/store.js'
+
 
 import './header.scss'
 import 'images/weixin.jpg'
 
 
 
-// Map Redux actions to component props
-function disSignIn(dispatch) {
+const SignIn=connect(null,(dispatch)=>{
     return {
-        signIn: () => dispatch(action.popSignIn)
+        click: () => dispatch(action.setVisible(true))
     }
-}
-class SignIn extends Component{
-    render(){
-        return(
-            <li onClick={this.props.signIn}>登 录</li>
-        );
-    }
-}
+})(Li);
 
-// Map Redux actions to component props
-function disSignUp(dispatch) {
+const SignUp=connect(null,(dispatch)=>{
     return {
-        signUp: () => dispatch(action.popSignUp)
+        click: () => dispatch(action.setVisible(true))
     }
-}
-
-
-class SignUp extends Component{
-    render(){
-        return(
-            <li onClick={this.props.signUp}>注 册</li>
-        );
-    }
-}
-
-const XSignUp=connect(null,disSignUp)(SignUp);
-const XSignIn=connect(null,disSignIn)(SignIn);
-
+})(Li)
 
 
 
@@ -68,15 +49,8 @@ export default class Header extends Component {
                     </div>
                     <div className="top_right">
                         <ul className="top_menu">
-                            <Provider store={store}>
-                                <XSignIn />
-                            </Provider>
-
-                            <Provider store={store}>
-                                <XSignUp />
-                            </Provider>
-
-
+                            <SignIn label={"登 录"}/>
+                            <SignUp label={"注 册"}/>
                             <li>帮助中心</li>
                         </ul>
                     </div>
