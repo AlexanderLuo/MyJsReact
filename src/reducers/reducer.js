@@ -5,7 +5,7 @@
  */
 
 // Reducer
-function reducer(state = { visibleFilter:{signIn:false,signUp:false},account: "" }, action='') {
+function reducer(state = { visibleFilter:{signIn:false,signUp:false},account: "" ,password:""}, action='') {
     switch (action.type) {
         case 'popSignIn':
             return { visibleFilter:{signIn:true}};
@@ -14,8 +14,16 @@ function reducer(state = { visibleFilter:{signIn:false,signUp:false},account: ""
         case 'popOut':
             return { visibleFilter:{signIn:false,signUp:false}};
         case "changeText":
+            if(action.account)
             state.account=action.account;
+            if(action.password)
+            state.password=action.password;
             return state;
+        case "signIn":
+            return{
+                account,
+                password
+            }
         default:
             return state
     }

@@ -18,7 +18,7 @@ import TipInput from 'component/InputBox/TipInput.js'
 function mapDis(dispatch){
     return {
         cancel:()=>dispatch(action.popOut),
-        //confirm:()=>dispatch(action.confirm)
+        confirm:()=>dispatch(action.signIn)
     }
 }
 
@@ -29,8 +29,6 @@ function mapPro(state){
 }
 
 const XConfirm=connect(mapPro,mapDis)(Confirm);
-
-
 
 
 
@@ -50,6 +48,23 @@ function mapProAccount(state){
 const Account=connect(mapProAccount,mapDisAccount)(TipInput);
 
 
+function mapDisPassword(dispatch){
+    return {
+        change:(password)=>dispatch(action.changeText(password))
+    }
+}
+
+
+function mapProPassword(state){
+    return{
+        value:state.password
+    }
+}
+const Password=connect(mapProPassword,mapDisPassword)(TipInput);
+
+
+
+
 
 export default class SignInPop extends Component {
     constructor(props) {
@@ -59,13 +74,13 @@ export default class SignInPop extends Component {
     render() {
         return (
             <XConfirm>
-                <Account labelText={"账号"} />
-                <TipInput labelText={"密码"} />
+
             </XConfirm>
         );
     }
 }
-
+//<Account labelText={"账号"} />
+//<Password labelText={"密码"} />
 
 
 SignInPop.defaultProps = {}

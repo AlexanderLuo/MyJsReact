@@ -38,11 +38,6 @@ export default class TipInput extends Component {
 
 
 
-
-
-
-
-
 TipInput.defaultProps={
     labelText: "标题",
     tipText: "请输入内容"
