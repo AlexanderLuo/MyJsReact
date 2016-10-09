@@ -38,14 +38,16 @@
 
   .top_left {
     @extend .left_part;
-    width: 22%;
+    width: 200px;
 }
   .top_center{
     @extend .center_part;
-    width: 58%;
+    @include bord(1px,1px,1px,1px,solid,blue);
+    width:770px ;
   }
   .top_right{
     @extend .right_part;
-    width: 20%;
+    width: 300px;
+
   }
 }

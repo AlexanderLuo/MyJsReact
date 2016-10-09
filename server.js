@@ -37,6 +37,11 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/json', function(req, res) {
+  res.send([{"name":"luohao","age":12},{"name":"yiyi","age":11},{"name":"godo","age":32}])
+});
+
+
 app.listen(port, function(error) {
   if (error) {
     console.error(error)

@@ -50,7 +50,7 @@ export default class GuideAdve extends Component {
                         />
                 </div>
 
-                <div className="adve_rigth">
+                <div className="adve_right">
                     <div className="item">
                         <img src="../../../images/hot1.jpg" />
                     </div>

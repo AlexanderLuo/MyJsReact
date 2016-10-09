@@ -13,6 +13,11 @@ import ThreeCol from 'component/Layout/ThreeCol.js'
 
 import Product from 'component/Product.js'
 import Lab_In_Clear from 'component/InputBox/TipInput.js'
+import A from 'component/Tag/A.js'
+import P from 'component/Tag/P.js'
+
+
+
 
 
 
@@ -45,10 +50,43 @@ class ContentTop  extends Component{
 }
 
 
+
+
+import { connect } from 'react-redux'
+import action from 'actions/action.js'
+
+
+const  XA=connect(
+    null,
+    (dispatch)=>{
+        return {
+            click:()=>{dispatch(action.fetchPosts())}
+        }
+    }
+)(A);
+const XP=connect(
+    (state)=>{
+        return{
+            data:state.items
+        }
+    },null
+)(P);
+
+
+
+
+
 export default class Content extends Component {
     render() {
         return (
+            <div>
                 <ContentTop />
+                <XA />
+                <XP />
+            </div>
+
+
+
         );
     }
 }

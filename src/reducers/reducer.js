@@ -11,9 +11,10 @@ const initState={
     signIn:false,
     signUp:false,
     account:"",
-    password:""
-
-
+    password:"",
+    isFetching: false,
+    didInvalidate: false,
+    items: []
 };
 
 
@@ -32,6 +33,18 @@ function reducer(state = initState, action={}) {
             if(action.id ==="password"){
                 return {...state,password:action.text}
             }
+            return state;
+        case 'SELECT_SUBREDDIT':
+            console.log("select");
+            return state;
+        case 'INVALIDATE_SUBREDDIT':
+            console.log("refresh")
+            return {...state,didInvalidate:true};
+
+        case 'RECEIVE_POSTS':
+            return {...state,items:action.items};
+        case 'REQUEST_POSTS':
+            console.log("req")
             return state;
         default:
             return state

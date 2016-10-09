@@ -24,7 +24,7 @@ textarea,input,select{ outline:none;font-family: Microsoft YaHei;}
 
 
 .yc{display: none}
-
+.center{margin: 0 auto}
 
 
 $gray1:rgb(172, 172, 172);
@@ -48,21 +48,21 @@ $mid-box:1000ox;
  **********************************************************************/
 
 
-@mixin pad($a,$b,$c,$d){
+@mixin pad($a:0,$b:0,$c:0,$d:0){
   padding: $a $b $c $d;
 }
-@mixin mag($a,$b,$c,$d){
+@mixin mag($a:0,$b:0,$c:0,$d:0){
   margin:$a $b $c $d;
 }
 @mixin area($wi,$he){
   width: $wi;
   height: $he;
 }
-@mixin left($mg-lef){
+@mixin left($mg-lef:0){
   float: left;
   margin-left: $mg-lef ;
 }
-@mixin right($mg-rig){
+@mixin right($mg-rig:0){
   float: right;
   margin-left: $mg-rig ;
 }
@@ -85,9 +85,10 @@ $mid-box:1000ox;
   }
 }
 
-@mixin ft($fz:16px,$fc:black){
+@mixin ft($fz:16px,$fc:black,$location:center){
   font-size: $fz;
   color: $fc;
+  text-align:$location;
 }
 
 @mixin bord($a,$b,$c,$d,$sty,$col){

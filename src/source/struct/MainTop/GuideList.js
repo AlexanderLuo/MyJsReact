@@ -14,9 +14,9 @@ class GuideListPart extends Component{
         return(
             <ul>
                 <li>
-                    <a>产品1</a>
-                    <a>产品2</a>
-                    <a>产品3</a>
+                    <a >产品1</a>
+                    <a >产品2</a>
+                    <a className="last">产品3</a>
                 </li>
 
             </ul>
@@ -32,12 +32,19 @@ export default class GuideList extends Component {
                 <h2>企业全程服务</h2>
                 <div className="guide_list_part">
                     <ul>
-                        <div>服务1</div>
-                        <GuideListPart />
-                        <div>服务2</div>
-                        <GuideListPart />
-                        <div>服务3</div>
-                        <GuideListPart />
+                        <li>
+                            <div>企业管理服务</div>
+                            <GuideListPart />
+                        </li>
+                        <li>
+                            <div>品牌创意活动</div>
+                            <GuideListPart />
+                        </li>
+                        <li>
+                            <div>服务3</div>
+                            <GuideListPart />
+                        </li>
+
                     </ul>
                 </div>
             </div>

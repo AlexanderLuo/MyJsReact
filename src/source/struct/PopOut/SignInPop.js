@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import { Provider, connect } from 'react-redux'
+import { connect } from 'react-redux'
 
 
 import action from 'actions/action.js'
@@ -24,7 +24,7 @@ import TipInput from 'component/InputBox/TipInput.js'
  },
      (dispatch)=>{
      return {
-         cancel:()=>dispatch(action.setVisible(false)),
+         cancel:()=>{dispatch(action.setVisible(false))},
          confirm:()=>dispatch(action.signIn())
 
      }}

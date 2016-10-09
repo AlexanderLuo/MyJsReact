@@ -3,28 +3,38 @@
 
 
   .guide_list {
-    @include left(0);
+    @include ft();
+    @extend .center;
     h2 {
       @include color(#e63b0d,white);
     }
     .guide_list_part {
       @include color(#ff5931,white);
     }
-    ul >li{
-      @include ft(16px,white)
+    a {
+      @include ft(16px,white,left);
+      @include mag(0,20px,0,0);
     }
+    .last{
+      @include mag();
+    }
+
   }
 
 
 .guide_adve {
   .adve_left {
     width: 70%;
-    @include left(0)
-
+    @include left()
   }
+
   .adve_right {
     width: 30%;
-    @include left(0)
+    @include right();
+    img {
+      @include area(230px,198.4px)
+
+    }
 
   }
 }

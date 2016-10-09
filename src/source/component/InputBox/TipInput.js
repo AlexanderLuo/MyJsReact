@@ -25,6 +25,7 @@ export default class TipInput extends Component {
     }
 
     render() {
+        console.log("render input")
         return (
             <div>,
                 <label>{this.props.label}</label>
